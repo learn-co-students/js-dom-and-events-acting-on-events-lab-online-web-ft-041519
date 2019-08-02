@@ -7,17 +7,21 @@ function preventRefreshOnSubmit(){
 preventRefreshOnSubmit()
 
 function retrieveEmployeeInformation(){
-  return $('input[name="name"]').value
+  let username = document.querySelector('input').value
+  return username
 }
 
 function addNewElementAsLi(){
-
+  let li = document.createElement("LI")
+  li.innerHTML = retrieveEmployeeInformation()
+  document.getElementsByClassName("employee-list").appendChild(li);
 }
 
 function addNewLiOnClick(){
-
+  return addNewElementAsLi()
 }
 
 function clearEmployeeListOnLinkClick(){
-
+  
 }
+
